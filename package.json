@@ -1,0 +1,28 @@
+{
+  "name": "oop-there-it-is",
+  "version": "1.0.0",
+  "description": "This is a employee profile html generator.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawnmwillard/oop-there-it-is.git"
+  },
+  "author": "Shawn Willard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shawnmwillard/oop-there-it-is/issues"
+  },
+  "homepage": "https://github.com/shawnmwillard/oop-there-it-is#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}

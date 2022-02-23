@@ -1,27 +1,39 @@
-class Employee {
-  constructor(name, id, email) {
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    getName();
-    getId();
-    getEmail();
-    getRole("Employee"); // Returns 'Employee'
-  }
-}
+const Employee = require("../lib/Employee");
 
-// The first class is an Employee parent class with the following properties and methods:
+it("Can create a new Employee class", () => {
+  const e = new Employee();
+  expect(typeof e).toBe("object");
+});
 
-// name
+it("Can set name of employee class", () => {
+  const name = "Aang";
+  const e = new Employee(name);
+  expect(e.name).toBe(name);
+});
 
-// id
+it("Can set id of employee class", () => {
+  const testId = 100;
+  const e = new Employee("Aang", testId);
+  expect(e.id).toBe(testId);
+});
 
-// email
+// it can set employee email
+// expect e.email to be testEmail
 
-// getName()
+it("Can get name from getName()", () => {
+  const name = "Aang";
+  const e = new Employee(name);
+  expect(e.getName()).toBe(name);
+});
 
-// getId()
+// it can get Id from getId() method
+// expect e.getId() to be testEmail
 
-// getEmail()
+// it can get Id from getEmail() method
+// expect e.getEmail() to be testId
 
-// getRole() // Returns 'Employee'
+it('return "employee" when getRole() is used', () => {
+  const expOut = "Employee";
+  const e = new Employee("Aang", 1, "test@test.com");
+  expect(e.getRole()).toBe(expOut);
+});

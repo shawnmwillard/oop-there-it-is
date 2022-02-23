@@ -1,37 +1,18 @@
-class Engineer {
-  constructor(name, id, email) {
-    this.name = name;
-    this.id = id;
-    this.email = email;
-    getName();
-    getId();
-    getEmail();
-    github; //GitHub Username
-    getGitHub();
-    getRole("Engineer"); // Overriden to return 'Engineer
-  }
-}
+const Engineer = require('../lib/Engineer')
 
-// This class is an Engineer parent class with the following properties and methods:
+it('Can set a github account using constructor', ()=> {
+    const expUser = 'GithubUser';
+    const e = new Engineer('Eugene', 1, 'engineer@email.com', expUser);
+    expect(e.github).toBe(expUser)
+});
+it('gets "Engineer" from getRole()', ()=>{
+    const expRole = 'Engineer';
+    const e = new Engineer('Eugene', 1, 'engineer@email.com', 'GithubUser');
+    expect(e.getRole()).toBe(expRole) 
+})
 
-// name
-
-// id
-
-// email
-
-// getName()
-
-// getId()
-
-// getEmail()
-
-// getRole() // Returns 'Employee'
-
-// In addition to Employee's properties and methods, Engineer will also have:
-
-// github // GitHub username
-
-// getGithub()
-
-// getRole() // Overridden to return 'Engineer'
+it('gets "Engineer" from getGithub()', ()=> {
+    const expUser = 'GithubUser';
+    const e = new Engineer('Eugene', 1, 'engineer@email.com', expUser);
+    expect(e.getGitHub()).toBe(expUser)
+});
